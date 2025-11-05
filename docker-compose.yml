@@ -1,0 +1,32 @@
+version: "3.9"
+
+services:
+  db:
+    image: mysql:8.0
+    container_name: or1-db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: int504
+      MYSQL_DATABASE: or1
+      TZ: Asia/Bangkok
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./database:/docker-entrypoint-initdb.d
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+
+  backend:
+    image: node:20-alpine
+    container_name: or1-backend
+    working_dir: /app
+    restart: always
+    ports:
+      - "3000:3000"
+    env_file:
+      - ./backend/.env
+    volumes:
+      - ./backend:/app
+      - /app/node_modules
+    command: sh -c "npm install && node src/app.js"
+    depends_on:
+      - db
