@@ -27,6 +27,6 @@ services:
     volumes:
       - ./backend:/app
       - /app/node_modules
-    command: sh -c "npm install && node src/app.js"
+    command: sh -c "npm install && node app.js"
     depends_on:
       - db
