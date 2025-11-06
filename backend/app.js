@@ -13,6 +13,5 @@ app.use(logger('dev'))  //ตัวเก็บ Log ของ Backend
 app.use(express.json()) //ให้ Backend อ่าน Header กับ Body ได้
 app.use(express.urlencoded({ extended: true })); //ไว้รับข้อมูลที่มาจาก tag <form> เผื่อไว้สำหรับ Sprint ถัดไป
 
-app.use('/study-plans', planRouter);
-
+app.use('/v1/study-plans', planRouter);
 module.exports = app;
