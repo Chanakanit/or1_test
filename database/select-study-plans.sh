@@ -1,11 +1,9 @@
 #!/bin/bash
 # select-study-plans.sh
-# ใช้ดูข้อมูลในตาราง study_plans
 
-# โหลด environment จาก backend/.env ถ้ามี
 if [ -f ./backend/.env ]; then
   set -a
-  source ./backend/.env
+  source ../backend/.env
   set +a
 else
   echo "⚠️  Warning: ./backend/.env not found, using default values."

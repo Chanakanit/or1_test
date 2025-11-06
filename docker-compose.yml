@@ -10,7 +10,8 @@ services:
       MYSQL_DATABASE: or1
       TZ: Asia/Bangkok
     volumes:
-      - ./database:/docker-entrypoint-initdb.d
+      - ./database/ddl.sql:/docker-entrypoint-initdb.d/01-ddl.sql
+      - ./database/dml.sql:/docker-entrypoint-initdb.d/02-dml.sql
     command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
     networks:
       - app_net
