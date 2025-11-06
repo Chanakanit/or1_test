@@ -6,7 +6,7 @@ set -e  # ถ้ามีคำสั่งไหน error ให้สคริ
 
 DB_CONTAINER="or1-db"
 ENV_FILE="../../backend/.env"
-SQL_FILE="../clear_study_plans.sql"
+SQL_FILE="$(dirname "$0")/../clear_study_plans.sql"
 
 # โหลด environment variables ถ้ามี .env
 if [ -f "$ENV_FILE" ]; then
