@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ 
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(229, 225, 225);
+    height: 100vh;
+    font-size: 16px;
+}
+ 
+.header{
+    background-color: rgb(31, 31, 153);
+    color: white;
+    padding: 10px 0px 10px 0px;
+    text-align: center;
+}
+ 
+.content{
+    margin: 10px 20px 10px 20px;
+    background-color: white;
+    border-radius: 2px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+ 
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+ 
+th,td{
+    border: 1px solid #ddd; /* เส้นขอบทุกช่อง */
+    text-align: center;
+    height: 10px;
+    font-size: 10px;
+    padding: 2px 5px 2px 5px;
+}
+ 
+th {
+    background-color: #ededed;
+}
+
+#error-server{
+    margin: auto;
+}
+
+
+ 

@@ -3,22 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <title>My App</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <h1>Data from Backend</h1>
-  <ul id="data-list"></ul>
-  <script>
-   fetch('/intproj25/or1/itb-ecors/api/data')
-     .then(res => res.json())
-     .then(data => {
-       const ul = document.getElementById('data-list');
-       data.forEach(item => {
-       const li = document.createElement('li');
-       li.textContent = JSON.stringify(item);
-       ul.appendChild(li);
-    });
-  })
-  .catch(err => console.error(err));
-  </script>
+  <div class="header">
+    <div>Study Plan Declaration and Course Reservation</div>
+  </div>
+
+  <div class="content">
+    <div>B.Sc.IT - Study Plans</div>
+    <table class="planList">
+
+    </table>
+  </div>
+
+  <dialog id="error-server">
+    <p>There is a problem. Please try again later.</p>
+  </dialog>
+
+  <script src="js/app.js" type="module" ></script>
 </body>
 </html>

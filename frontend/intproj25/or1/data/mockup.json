@@ -1,0 +1,32 @@
+[
+ {
+   "id": 1,
+   "planCode": "PLN001",
+   "nameEng": "Basic Health Plan",
+   "nameTh": "แผนสุขภาพพื้นฐาน"
+ },
+ {
+   "id": 2,
+   "planCode": "PLN002",
+   "nameEng": "Silver Care Plan",
+   "nameTh": "แผนดูแลเงินเงิน"
+ },
+ {
+   "id": 3,
+   "planCode": "PLN003",
+   "nameEng": "Gold Plus Plan",
+   "nameTh": "แผนทองพลัส"
+ },
+ {
+   "id": 4,
+   "planCode": "PLN004",
+   "nameEng": "Platinum Elite Plan",
+   "nameTh": "แผนแพลทินัมเอลิท"
+ },
+ {
+   "id": 5,
+   "planCode": "PLN005",
+   "nameEng": "Family Protection Plan",
+   "nameTh": "แผนคุ้มครองครอบครัว"
+ }
+]

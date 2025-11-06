@@ -1,16 +1,12 @@
-function mapData(dto){
-    return {
-        id: dto.id,
-        planCode: dto.plan_code,
-        nameEng: dto.name_eng,
-        nameTh: dto.name_th
-    }
-}
-function mapDataList(dtos) {
-  return dtos.map(mapData);
-}
+class studyPlanDto {
+  constructor(plan = {}) {
+    const { id, plan_code, name_eng, name_th } = plan
 
-module.exports = {
-  mapData,
-  mapDataList,
-};
+    this.id = id ?? null
+    this.planCode = plan_code ?? "-"
+    this.nameEng = name_eng ?? "-"
+    this.nameTh = name_th ?? "-"
+
+  }
+}
+module.exports = studyPlanDto;

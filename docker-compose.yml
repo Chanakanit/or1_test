@@ -9,11 +9,11 @@ services:
       MYSQL_ROOT_PASSWORD: int504
       MYSQL_DATABASE: or1
       TZ: Asia/Bangkok
-    ports:
-      - "3306:3306"
     volumes:
       - ./database:/docker-entrypoint-initdb.d
     command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    networks:
+      - or1-network
 
   backend:
     image: node:20-alpine
@@ -30,3 +30,9 @@ services:
     command: sh -c "npm install && node app.js"
     depends_on:
       - db
+    networks:
+      - or1-network
+
+networks:
+  or1-network:
+    driver: bridge

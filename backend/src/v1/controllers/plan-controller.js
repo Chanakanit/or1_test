@@ -1,5 +1,5 @@
 var service = require("../services/plan-service")
-var dto = require("../dtos/plan-dto.js")
+var studyPlanDto = require("../dtos/plan-dto.js")
 
 function error(req, error, message, statusCode){
     return {
@@ -15,7 +15,7 @@ module.exports = {
     list: async function(req, res){
         try{
             const plans = await service.getAllPlan();
-            const result = dto.mapDataList(plans);
+            const result = plans.map(row => new studyPlanDto(row));
             res.json(result);
         } catch (e){
             const status = e.status || 500
