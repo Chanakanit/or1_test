@@ -5,7 +5,7 @@
 set -e  # ถ้ามีคำสั่งไหน error ให้สคริปต์หยุดทันที
 
 DB_CONTAINER="or1-db"
-ENV_FILE="../../backend/.env"
+ENV_FILE="$(dirname "$0")../../backend/.env"
 SQL_FILE="$(dirname "$0")/../clear_study_plans.sql"
 
 # โหลด environment variables ถ้ามี .env

@@ -5,7 +5,7 @@
 set -e  # หยุดเมื่อเกิด error
 
 DB_CONTAINER="or1-db"
-ENV_FILE="../../backend/.env"
+ENV_FILE="$(dirname "$0")../../backend/.env"
 SQL_FILE="$(dirname "$0")/../dml.sql"
 
 # โหลด environment variables ถ้ามี .env

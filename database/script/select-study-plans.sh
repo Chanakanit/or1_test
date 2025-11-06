@@ -1,7 +1,7 @@
 #!/bin/bash
 # select-study-plans.sh
-
-if [ -f ../../backend/.env ]; then
+ENV_FILE="$(dirname "$0")../../backend/.env"
+if [ -f "$ENV_FILE" ]; then
   set -a
   source ../../backend/.env
   set +a
