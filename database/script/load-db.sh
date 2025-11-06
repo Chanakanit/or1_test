@@ -4,7 +4,7 @@
 
 if [ -f ./backend/.env ]; then
   set -a
-  source ../backend/.env
+  source ../../backend/.env
   set +a
 else
   echo "⚠️  Warning: ./backend/.env not found, using default values."
@@ -17,5 +17,5 @@ fi
 DB_CONTAINER=or1-db
 
 echo "📦 Loading base data into study_plans..."
-docker exec -i $DB_CONTAINER mysql -h$DB_HOST -u$DB_USER -p$DB_PASSWORD $DB_NAME < ./dml.sql
+docker exec -i $DB_CONTAINER mysql -h$DB_HOST -u$DB_USER -p$DB_PASSWORD $DB_NAME < ../dml.sql
 echo "✅ Data loaded successfully."
