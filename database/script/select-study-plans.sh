@@ -1,7 +1,7 @@
 #!/bin/bash
 # select-study-plans.sh
 
-if [ -f ./backend/.env ]; then
+if [ -f ../../backend/.env ]; then
   set -a
   source ../../backend/.env
   set +a

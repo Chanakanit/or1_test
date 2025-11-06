@@ -2,7 +2,7 @@
 # clear-db.sh
 # ล้างข้อมูลในตาราง study_plans
 
-if [ -f ./backend/.env ]; then
+if [ -f ../../backend/.env ]; then
   set -a
   source ../../backend/.env
   set +a

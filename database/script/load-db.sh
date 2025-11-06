@@ -2,7 +2,7 @@
 # load-db.sh
 # เติมข้อมูลตั้งต้นเข้า study_plans
 
-if [ -f ./backend/.env ]; then
+if [ -f ../../backend/.env ]; then
   set -a
   source ../../backend/.env
   set +a
